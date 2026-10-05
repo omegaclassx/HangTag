@@ -1,0 +1,63 @@
+/* 1. Track container sits cleanly between your email capture and footer */
+.road-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 140px; 
+  background: transparent !important; 
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: -125px; 
+}
+
+/* 2. Sizing and dual-animation setup for the PNG */
+.animated-car {
+  position: absolute;
+  bottom: 25px;
+  height: auto;
+  max-height: 85px; /* Adjust this if your PNG looks too big or too small */
+  width: auto;
+  left: -200px;
+  background: transparent !important;
+  animation: 
+    driveAcross 7s linear infinite,
+    floatVehicle 0.5s ease-in-out infinite alternate;
+}
+
+/* 3. The Driving & Delivery Stop Timeline */
+@keyframes driveAcross {
+ 0% { 
+    left: -200px; 
+    transform: scaleX(-1) translateY(0); 
+  }
+  40% { 
+    left: 45%; 
+    transform: scaleX(-1) translateY(0); /* Arrives at delivery spot */
+  }
+  
+  /* DELIVERY IDLE ENGINE SHAKE (42% to 65%) */
+  42% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  46% { left: 45%; transform: scaleX(-1) translateY(0); }
+  50% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  54% { left: 45%; transform: scaleX(-1) translateY(0); }
+  58% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  62% { left: 45%; transform: scaleX(-1) translateY(0); }
+  
+  65% { 
+    left: 45%; 
+    transform: scaleX(-1) translateY(0); /* Finishes delivery */
+  }
+  68% { 
+    left: 47%; 
+    transform: scaleX(-1) translateY(0); /* Steps on gas pedal */
+  }
+  95% { 
+    left: 100%; 
+    transform: scaleX(-1) translateY(0); /* Drives off right edge */
+  }
+  100% { 
+    left: 100%; 
+    transform: scaleX(-1) translateY(0); 
+  }
+}

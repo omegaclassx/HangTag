@@ -1,0 +1,104 @@
+.countdown {
+  text-align: center;
+  margin: 20px auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ctd-title {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.25em;
+  color: var(--text-dark);
+  opacity: 0.85;
+}
+
+.timer {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  color: var(--neon-red);
+  padding: 6px 12px;
+  border-top: 1px solid var(--neon-red);
+  border-bottom: 1px solid var(--neon-red);
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.gate-form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.gate-input {
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--concrete);
+  color: var(--text-light);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
+
+.gate-input::placeholder {
+  color: var(--concrete);
+  opacity: 0.7;
+}
+
+.gate-submit {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: var(--neon-red);
+  border: none;
+  color: var(--text-dark);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.gate-submit:hover {
+  opacity: 0.85;
+}
+
+
+.gateways-box {
+  position: relative;
+
+.mini-scroll-aligned {
+  position: absolute;
+  bottom: 60px;                
+  left: 100px;
+  display: flex;
+  align-items: center;
+  gap: 3.75rem;
+  width: 100%;
+}
+
+.mini-scroll-aligned img {
+ flex-shrink: 0;
+  height: 130px; 
+  width: 100px;  
+  border-radius: 0px;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .gateways-box {
+    position: static;
+  }
+  .mini-scroll-aligned {
+    position: relative;
+    margin-top: 3rem;      
+  }
+}
+
+
+
+

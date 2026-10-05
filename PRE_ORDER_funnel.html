@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randoza Blvd | PRE-ORDER</title>
+  <link rel="stylesheet" href="styles.css?v=1.1">
+  <link rel="stylesheet" href="preorder.css?v=1.0">
+</head>
+
+<body>
+
+<header class="site-header">
+  <h1 class="brand-name">Randoza Blvd</h1>
+  <nav class="header-nav">
+    <class="nav-link">Luxury Lifestyle |</class>
+    <class="nav-link">Streetwear Distribution</class>
+  </nav>
+</header>
+
+<main>
+     <section class="hero"> 
+    <img src="assets/RandozaBlvd.png" alt="Randoza Blvd Logo" class="hero-logo" style="width: 100px; margin-bottom: 5px;">
+
+  </section> 
+  <section class="tagline">
+    <h2 class="tagline-text">SAVE THE DATE</h2>
+  </section>
+<div class="countdown">
+  <span class="ctd-title">OPENING DAY CELEBRATION 11.11</span>
+  <div class="timer" id="chapterTimer">25 : 04 : 18 : 52</div>
+</div>
+</main>
+ <section class="split-portal-system">
+
+    <div class="portal-side design-showcase">
+      <div class="showcase-media-box">
+        <img src="assets/frankb.jpeg" alt="New SZN Drop">
+      </div>
+      
+           <h3 class="showcase-title">NEW SZN</h3>
+      
+      <p class="showcase-text">
+        Herbacious marks the thinning of the veil with their HARVEST capsule reveal.<br>
+        Early access & more chances to win NOW at <a href="https://www.google.com/maps/search/?api=1&query=37.6929091,-97.424343" class="inline-link" target="_blank">Green Valley Smoke Shop →</a>
+      </p>   
+    </div>  
+    
+    <div class="portal-side gateways-box">
+      <div class="gate-block">
+        <div class="gate-header-group">
+          <span class="gate-heading">New SZN <br>Pre-Order</span>
+          <h3 class="gate-num">Leave nothing to chance</h3>
+        </div>
+
+        <p class="gate-info">
+          Reserve your piece of the new season.<br>
+          Hand-numbered limited edition seasonal curation.<br>
+          Complimentary shipping included.<br>
+          <br><br>
+        </p>
+
+        <a href="https://buy.stripe.com/9B6bJ3gJ1diX5ZM6lvafS01" class="clean-gate-link">
+          RESERVE NOW
+        </a>
+<p class="preorder-policy">
+  Preorder deposits are final and applied toward your remaining balance at release.
+</p>
+</div>
+      <div class="mini-scroll-aligned">
+        <img src="assets/IMG_3210.jpeg" alt="Slab">
+        <img src="assets/herbacious.png" alt="Herbacious">
+                <img src="assets/hp_harvest.jpeg" alt="Preview">
+      </div>
+    </div>
+
+</section>
+</main>
+
+<footer class="street-footer">
+  <div class="footer-inner">
+    <p class="footer-brand">RANDOZA BLVD</p>
+    <p class="footer-tag">Luxury Lifestyle & Streetwear Distribution</p>
+    <p class="footer-copy">© 2024 Randoza Blvd. All Rights Reserved.</p>
+  </div>
+</footer>
+<script>
+  const targetDate = new Date("2026-11-11T00:00:00").getTime();
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = targetDate - now;
+
+    const days = String(Math.floor(diff / (1000 * 60 * 60 * 24))).padStart(2, '0');
+    const hours = String(Math.floor((diff / (1000 * 60 * 60)) % 24)).padStart(2, '0');
+    const minutes = String(Math.floor((diff / (1000 * 60)) % 60)).padStart(2, '0');
+    const seconds = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+
+    document.getElementById("chapterTimer").innerText = `${days} : ${hours} : ${minutes} : ${seconds}`;
+  }, 1000);
+</script>
+
+</body>
+</html>

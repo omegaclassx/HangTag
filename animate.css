@@ -1,0 +1,124 @@
+.road-track {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  height: 140px; 
+  background: transparent !important; 
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: -125px; 
+}
+
+.animated-car {
+  position: absolute;
+  bottom: 25px;
+  height: auto;
+  max-height: 85px; 
+  width: auto;
+  left: -200px;
+  background: transparent !important;
+  animation: 
+    driveAcross 7s linear infinite,
+    floatVehicle 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes driveAcross {
+ 0% { 
+    left: -200px; 
+    transform: scaleX(-1) translateY(0); 
+  }
+  40% { 
+    left: 45%; 
+    transform: scaleX(-1) translateY(0); 
+  }
+  
+  42% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  46% { left: 45%; transform: scaleX(-1) translateY(0); }
+  50% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  54% { left: 45%; transform: scaleX(-1) translateY(0); }
+  58% { left: 45%; transform: scaleX(-1) translateY(-2px); }
+  62% { left: 45%; transform: scaleX(-1) translateY(0); }
+  
+  65% { 
+    left: 45%; 
+    transform: scaleX(-1) translateY(0); /* Finishes delivery */
+  }
+  68% { 
+    left: 47%; 
+    transform: scaleX(-1) translateY(0); /* Steps on gas pedal */
+  }
+  95% { 
+    left: 100%; 
+    transform: scaleX(-1) translateY(0); /* Drives off right edge */
+  }
+  100% { 
+    left: 100%; 
+    transform: scaleX(-1) translateY(0); 
+  }
+}
+
+.storefront-lane {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 20px 0;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 40px; 
+  align-items: center;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.storefront-lane::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.storefront-track {
+  display: flex;
+  gap: 90px; 
+  padding-left: 40px; 
+}
+
+
+.storefront {
+  flex: 0 0 auto;
+  scroll-snap-align: start; 
+  width: 140px;   
+  height: 90px;   
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+
+.brand-logo {
+  max-height: 60px;     
+  width: auto;          
+  object-fit: contain;  
+  opacity: 0.9;
+
+
+  filter:
+    brightness(1.25)
+    contrast(1.2)
+    saturate(1.1)
+    drop-shadow(0px 0px 4px rgba(255,255,255,0.35))
+    drop-shadow(0px 0px 8px rgba(180,180,180,0.25));
+
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+
+.brand-logo:hover {
+  opacity: 1;
+  filter:
+    brightness(1.35)
+    contrast(1.25)
+    saturate(1.15)
+    drop-shadow(0px 0px 6px rgba(255,255,255,0.45))
+    drop-shadow(0px 0px 12px rgba(200,200,200,0.35));
+}
+
+}
